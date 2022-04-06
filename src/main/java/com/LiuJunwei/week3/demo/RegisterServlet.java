@@ -29,4 +29,6 @@ public class RegisterServlet extends HttpServlet {
         writer.println("<br>gender :"+gender);
         writer.println("<br>birthDate :"+birthDate);
         writer.close();
+        request.getRequestDispatcher("userList.jsp").forward(request,response);
+        System.out.println("i am in RegisterServlet-->doPost()--> after forward()");
     }}
